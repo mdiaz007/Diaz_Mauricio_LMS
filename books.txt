@@ -1,0 +1,10 @@
+1,Fight Club,Chuck Palahniuk,1996,9780091835132,true,null
+2,American Psycho,Bret Ellis,1991,9780307278630,true,null
+3,Fake Book III,Fake Author,1996,978009183513F,true,null
+4,Fake Book IV,Fake Author,1996,978009183513F,true,null
+5,Fake Book V,Fake Author,1996,978009183513F,true,null
+6,Fake Book VI,Fake Author,1996,978009183513F,true,null
+7,Fake Book VII,Fake Author,1996,978009183513F,true,null
+8,Fake Book VIII,Fake Author,1996,978009183513F,true,null
+9,Fake Book IX,Fake Author,1996,978009183513F,true,null
+10,Fake Book X,Fake Author,1996,978009183513F,true,null

@@ -12,30 +12,19 @@
 package LMS;
 
 import java.util.*;
+import java.time.*;
 
 public class LMS_Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // Scanner for reading user input.
+        Book book = new Book(); // Creating book object, used for holding book data.
+        book.menuOptions(scanner); // Calls menuOptions which begins the program.
 
-        Book book = new Book();
-//        book.addBook(scanner);
-//        book.deleteBookBarcode(scanner);
-//        book.deleteBookTitle(scanner);
-//        book.checkInBook(scanner);
-//        book.checkOutBook(scanner);
-
-//        book.printAll();
-
-        book.importBooks(scanner);
     }
 }
 
 /*
 * TODO: Module 9
-* delete function - needs database connection.
-* add function - needs database connection.
-* check in & out function - needs database connection.
-* print functions - needs database connection.
-* import function - needs database connection + needs IO loop (can do this now)
+* Need to connect functions to database for the importing and exporting of data.
 * */

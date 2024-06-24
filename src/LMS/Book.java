@@ -118,8 +118,9 @@ public class Book { // Book class for setting up Book objects.
         }
 
         /*
-        * Function for adding book to database with given values
+        * Function for adding book to database with given values.
         * */
+
 
         System.out.println("Adding book: " + getTitle()); // Confirmation message
         resetBook(); // Resets Book to default values.
@@ -139,6 +140,7 @@ public class Book { // Book class for setting up Book objects.
         System.out.println("Deleting book with barcode number: " + getBarcode()); // Confirmation message
 
         resetBook();
+
     }
 
     // Function asks user for input for deleting book with given title.

@@ -12,7 +12,6 @@
 package LMS;
 
 import java.util.*;
-import java.time.*;
 
 public class LMS_Main {
     public static void main(String[] args) {
@@ -27,4 +26,5 @@ public class LMS_Main {
 /*
 * TODO: Module 9
 * Need to connect functions to database for the importing and exporting of data.
+* Organize project files to use standard java project structure, checkout MAVEN.
 * */

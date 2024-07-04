@@ -89,36 +89,37 @@ public class Book { // Book class for setting up Book objects.
     }
 
     // Function for asking user for book information then adding to database.
-    public void addBook(Scanner scanner, int decision){
+    public void addBook(int decision){
 
-        // Decision is for function needs to be used without user import, for importing purposes.
+        Scanner scanMe = new Scanner(System.in);
+        // Decision is for function needs to be used without user import, for importing purposes. Decision 1
         if (decision == 1){
             System.out.print("Book ID: ");
-            setId(scanner.nextInt());
-            scanner.nextLine();
+            setId(scanMe.nextInt());
+            scanMe.nextLine();
 
             System.out.print("Title: ");
-            setTitle(scanner.nextLine());
+            setTitle(scanMe.nextLine());
 
             System.out.print("Author: ");
-            setAuthor(scanner.nextLine());
+            setAuthor(scanMe.nextLine());
 
             System.out.print("ReleaseYear: ");
-            setReleaseYear(scanner.nextInt());
-            scanner.nextLine();
+            setReleaseYear(scanMe.nextInt());
+            scanMe.nextLine();
 
             System.out.print("Barcode: ");
-            setBarcode(scanner.nextLine());
+            setBarcode(scanMe.nextLine());
 
             System.out.print("Status: ");
-            setStatus(scanner.nextLine());
+            setStatus(scanMe.nextLine());
 
             System.out.print("Due Date: ");
-            setDueDate(scanner.nextLine());
+            setDueDate(scanMe.nextLine());
         }
 
         /*
-        * Function for adding book to database with given values.
+        * Function for adding book to database with given values. Decision 2
         * */
 
 
@@ -127,10 +128,11 @@ public class Book { // Book class for setting up Book objects.
     }
 
     // Function asks user for input for deleting book with given barcode.
-    public void deleteBookBarcode(Scanner scanner){
+    public String deleteBookBarcode(/*Scanner scanner*/String Barcode){
         System.out.println("Book Deletion");
         System.out.print("Please enter barcode corresponding to the book for deletion: ");
-        setBarcode(scanner.nextLine());
+//        setBarcode(scanner.nextLine());
+        setBarcode(Barcode);
 
         /*
         * Function for going through database and finding book with given
@@ -138,16 +140,20 @@ public class Book { // Book class for setting up Book objects.
         * */
 
         System.out.println("Deleting book with barcode number: " + getBarcode()); // Confirmation message
+        String holder = "Deleting book with barcode number: " + getBarcode();
 
         resetBook();
+
+        return holder;
 
     }
 
     // Function asks user for input for deleting book with given title.
-    public void deleteBookTitle(Scanner scanner){
+    public String deleteBookTitle(/*Scanner scanner*/ String Title){
         System.out.println("Book Deletion");
         System.out.print("Please enter title corresponding to the book for deletion: ");
-        setTitle(scanner.nextLine());
+//        setTitle(scanner.nextLine());
+        setTitle(Title);
 
         /*
          * Function for going through database and finding book with given
@@ -156,12 +162,17 @@ public class Book { // Book class for setting up Book objects.
 
         System.out.println("Deleting book with title: " + getTitle()); // Confirmation message
 
+        String holder = "Deleting book with title: " + getTitle();
         resetBook();
+
+        return holder;
+
     }
 
-    public void checkInBook(Scanner scanner){
+    public String checkInBook(/*Scanner scanner*/ String Title){
         System.out.print("Check in book: ");
-        setTitle(scanner.nextLine());
+//        setTitle(scanner.nextLine());
+        setTitle(Title);
         setStatus("Checked-In");
         setDueDate(null);
 
@@ -172,10 +183,14 @@ public class Book { // Book class for setting up Book objects.
 
         System.out.println("Checking in book: " + getTitle()); // Confirmation message
 
+        String holder = "Checking in book: " + getTitle();
+
         resetBook();
+
+        return holder;
     }
 
-    public void checkOutBook(Scanner scanner){
+    public String checkOutBook(/*Scanner scanner*/ String Title){
 
         // Creates LocalDate objects for use of due date.
         LocalDate currentDate = LocalDate.now();
@@ -183,7 +198,8 @@ public class Book { // Book class for setting up Book objects.
         String dueDateString = dueDate.toString();
 
         System.out.print("Check Out book: ");
-        setTitle(scanner.nextLine());
+//        setTitle(scanner.nextLine());
+        setTitle(Title);
 
         /*
         * Error message if book not found or already checked out.
@@ -200,7 +216,11 @@ public class Book { // Book class for setting up Book objects.
         System.out.println("Checking Out book: " + getTitle()); // Confirmation message
         System.out.println("Due Date: " + getDueDate()); // Confirmation message
 
+        String holder = ("Checking Out book: " + getTitle()); // Confirmation message
+
         resetBook();
+
+        return holder;
     }
 
     // Function for printing all books in database.
@@ -230,6 +250,7 @@ public class Book { // Book class for setting up Book objects.
         resetBook(); // If Object is used, if not remove.
 
     }
+
     public void seeUnavailableBooks(){
 
         /*
@@ -244,14 +265,15 @@ public class Book { // Book class for setting up Book objects.
 
     }
 
-    public void importBooks(Scanner scanner){
+    public String importBooks(/*Scanner scanner*/String TextFileLocation){
 
         String line = null; // Holds line data of imported file.
         int counter = 0; // Counter for holding number of how many books have been added.
 
         // Takes user give
-        System.out.print("Please enter name of comma delimited text file of books to be imported: ");
-        String title = scanner.nextLine();
+//        System.out.print("Please enter name of comma delimited text file of books to be imported: ");
+//        String title = scanner.nextLine();
+        String title = TextFileLocation;
         System.out.println("Importing " + title + " books into the database");
 
         try { // Try and catch just in case for exception handling.
@@ -272,15 +294,20 @@ public class Book { // Book class for setting up Book objects.
                 setDueDate(delimitMe[6]);
 
                 // Calls addBook function to add book to database.
-                addBook(scanner, 0);
+                addBook(2);
                 counter++;
             }
 
-            System.out.println("Import complete");
-            System.out.println(counter + " Books have been imported into database");
+//            System.out.println("Import complete");
+//            System.out.println(counter + " Books have been imported into database");
+
+            String returnMe = (counter + " Books have been imported into database");
             reader.close(); // Closes reader.
+            return returnMe;
         } catch (IOException e){
-            System.out.println("Error while reading file");
+//            System.out.println("Error while reading file");
+            String returnMe = "Error while reading file";
+            return returnMe;
         }
 
         /* Will not call resetBook() because addBook() function calls it*/
@@ -296,64 +323,65 @@ public class Book { // Book class for setting up Book objects.
 //        System.out.println("DueDate: " + getDueDate());
 //    }
 
-    public void menuOptions(Scanner scanner){
+//    public void menuOptions(Scanner scanner){
+//
+//        int selection = -1; // Keeps track of user selected menu option.
+//
+//        do {
+//
+//            // Menu options
+//            System.out.println("\nMenu Options");
+//            System.out.println("[1] addBook");
+//            System.out.println("[2] deleteBookBarcode");
+//            System.out.println("[3] deleteBookTitle");
+//            System.out.println("[4] checkInBook");
+//            System.out.println("[5] checkOutBook");
+//            System.out.println("[6] seeAllBooks");
+//            System.out.println("[7] seeAvailableBooks");
+//            System.out.println("[8] seeUnavailableBooks");
+//            System.out.println("[9] importBooks");
+//            System.out.println("[0] exit program");
+//
+//            System.out.print("Selection: ");
+//            selection = scanner.nextInt();
+//            scanner.nextLine();
+//
+//            switch(selection){ // Chooses function based on user selection.
+//                case 1:
+//                    addBook(1);
+//                    break;
+//                case 2:
+//                    deleteBookBarcode(scanner);
+//                    break;
+//                case 3:
+//                    deleteBookTitle(scanner);
+//                    break;
+//                case 4:
+//                    checkInBook(scanner);
+//                    break;
+//                case 5:
+//                    checkOutBook(scanner);
+//                    break;
+//                case 6:
+//                    seeAllBooks();
+//                    break;
+//                case 7:
+//                    seeAvailableBooks();
+//                    break;
+//                case 8:
+//                    seeUnavailableBooks();
+//                    break;
+//                case 9:
+//                    importBooks();
+//                    break;
+//                case 0:
+//                    System.out.println("Exiting program");
+//                    break;
+//                default:
+//                    System.out.println("Invalid selection, please try again!");
+//                    break;
+//            }
+//        }while (selection != 0);
+//    }
 
-        int selection = -1; // Keeps track of user selected menu option.
-
-        do {
-
-            // Menu options
-            System.out.println("\nMenu Options");
-            System.out.println("[1] addBook");
-            System.out.println("[2] deleteBookBarcode");
-            System.out.println("[3] deleteBookTitle");
-            System.out.println("[4] checkInBook");
-            System.out.println("[5] checkOutBook");
-            System.out.println("[6] seeAllBooks");
-            System.out.println("[7] seeAvailableBooks");
-            System.out.println("[8] seeUnavailableBooks");
-            System.out.println("[9] importBooks");
-            System.out.println("[0] exit program");
-
-            System.out.print("Selection: ");
-            selection = scanner.nextInt();
-            scanner.nextLine();
-
-            switch(selection){ // Chooses function based on user selection.
-                case 1:
-                    addBook(scanner, 1);
-                    break;
-                case 2:
-                    deleteBookBarcode(scanner);
-                    break;
-                case 3:
-                    deleteBookTitle(scanner);
-                    break;
-                case 4:
-                    checkInBook(scanner);
-                    break;
-                case 5:
-                    checkOutBook(scanner);
-                    break;
-                case 6:
-                    seeAllBooks();
-                    break;
-                case 7:
-                    seeAvailableBooks();
-                    break;
-                case 8:
-                    seeUnavailableBooks();
-                    break;
-                case 9:
-                    importBooks(scanner);
-                    break;
-                case 0:
-                    System.out.println("Exiting program");
-                    break;
-                default:
-                    System.out.println("Invalid selection, please try again!");
-                    break;
-            }
-        }while (selection != 0);
-    }
 }

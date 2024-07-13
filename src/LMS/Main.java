@@ -4,9 +4,8 @@
 	June 15, 2024
 	Software Development 1
 
-	Main: This is the main class for the library management system, it is what pulls
-	all necessary functions together so that the user can add, remove, check in, checkout,
-	and see book information.
+	Main: This is the main function of my library management system (LMS), it opens the GUI which then allows
+	the user to interact with the LMS.
 */
 
 package LMS;
@@ -16,32 +15,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-
 
 public class Main extends Application {
 
     public static void main(String[] args) {
-
-        launch(args);
-
-        // Original Main >
-//        Scanner scanner = new Scanner(System.in); // Scanner for reading user input.
-//        Book book = new Book(); // Creating book object, used for holding book data.
-//        book.menuOptions(scanner); // Calls menuOptions which begins the program.
-
+        launch(args); // Launches JavaFX GUI.
     }
 
     @Override // Good practice to include, generates error if extension doesn't work.
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException { // Starts up GUI on start screen.
 
+        // Creates the first scene.
         Parent root = FXMLLoader.load(getClass().getResource("Scenes/PStartScreen.fxml"));
         Scene scene = new Scene(root, 800, 600);
 
+        // Allows for use of CSS to add styling to GUI.
         String css = this.getClass().getResource("Styles.css").toExternalForm();
         scene.getStylesheets().add(css);
 
+        // Sets stage options.
         stage.setMinHeight(600);
         stage.setMinWidth(800);
         stage.setTitle("Library Management System");
@@ -50,11 +43,4 @@ public class Main extends Application {
 
     }
 
-
 }
-
-/*
-* TODO: Module 9
-* Need to connect functions to database for the importing and exporting of data.
-* Organize project files to use standard java project structure, checkout MAVEN.
-* */

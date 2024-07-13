@@ -1,3 +1,14 @@
+/*
+	Mauricio Diaz
+	CEN3024C
+	July 12, 2024
+	Software Development 1
+
+	SceneController: This is the SceneController class. This class is responsible for holding
+	all the scene data for all the possible scenes in the LMS.
+*/
+
+
 package LMS;
 
 import javafx.event.ActionEvent;
@@ -6,8 +17,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -26,7 +35,7 @@ public class SceneController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root, 800, 600);
 
-
+        // Different settings than other scenes in this class.
         stage.setMaximized(false);
         stage.setMinHeight(600);
         stage.setMinWidth(800);
@@ -42,8 +51,7 @@ public class SceneController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root, 800, 600);
 
-
-        // Goes on every scene in this class.
+        // Same settings for every scene in the class.
         stage.setMaximized(true);
         stage.setMinHeight(600);
         stage.setMinWidth(800);
@@ -57,8 +65,7 @@ public class SceneController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root, 800, 600);
 
-
-        // Goes on every scene in this class.
+        // Same settings for every scene in the class.
         stage.setMaximized(true);
         stage.setMinHeight(600);
         stage.setMinWidth(800);
@@ -72,8 +79,7 @@ public class SceneController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root, 800, 600);
 
-
-        // Goes on every scene in this class.
+        // Same settings for every scene in the class.
         stage.setMaximized(true);
         stage.setMinHeight(600);
         stage.setMinWidth(800);
@@ -87,8 +93,7 @@ public class SceneController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root, 800, 600);
 
-
-        // Goes on every scene in this class.
+        // Same settings for every scene in the class.
         stage.setMaximized(true);
         stage.setMinHeight(600);
         stage.setMinWidth(800);
@@ -102,8 +107,7 @@ public class SceneController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root, 800, 600);
 
-
-        // Goes on every scene in this class.
+        // Same settings for every scene in the class.
         stage.setMaximized(true);
         stage.setMinHeight(600);
         stage.setMinWidth(800);
@@ -117,8 +121,7 @@ public class SceneController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root, 800, 600);
 
-
-        // Goes on every scene in this class.
+        // Same settings for every scene in the class.
         stage.setMaximized(true);
         stage.setMinHeight(600);
         stage.setMinWidth(800);
@@ -130,19 +133,16 @@ public class SceneController {
     public void exitCommand(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Scenes/PBookUnavailableCatalog.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-
         stage.close();
     }
 
     // Admin Scenes
-
     public void AMainMenu(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Scenes/AMainMenu.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root, 800, 600);
 
-
-        // Goes on every scene in this class.
+        // Same settings for every scene in the class.
         stage.setMaximized(true);
         stage.setMinHeight(600);
         stage.setMinWidth(800);
@@ -156,8 +156,7 @@ public class SceneController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root, 800, 600);
 
-
-        // Goes on every scene in this class.
+        // Same settings for every scene in the class.
         stage.setMaximized(true);
         stage.setMinHeight(600);
         stage.setMinWidth(800);
@@ -171,8 +170,7 @@ public class SceneController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root, 800, 600);
 
-
-        // Goes on every scene in this class.
+        // Same settings for every scene in the class.
         stage.setMaximized(true);
         stage.setMinHeight(600);
         stage.setMinWidth(800);
@@ -186,8 +184,7 @@ public class SceneController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root, 800, 600);
 
-
-        // Goes on every scene in this class.
+        // Same settings for every scene in the class.
         stage.setMaximized(true);
         stage.setMinHeight(600);
         stage.setMinWidth(800);
@@ -196,7 +193,13 @@ public class SceneController {
         stage.show();
     }
 
-    // Button functions
+    /*
+     These functions are responsible for executing functions from the book
+     class when a specific button is pressed in the GUI.
+
+     @FXML tags allow for private variables to be seen/connected to respective FXML file
+     so that the action does what it is supposed to do.
+    */
 
     @FXML
     private TextField InputText;
@@ -227,7 +230,5 @@ public class SceneController {
         String holder = book.checkOutBook(InputText.getText());
         OutputText.setText(holder);
     }
-
-
 
 }

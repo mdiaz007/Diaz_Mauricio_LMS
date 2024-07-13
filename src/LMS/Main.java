@@ -4,7 +4,7 @@
 	June 15, 2024
 	Software Development 1
 
-	Main: This is the main function of my library management system (LMS), it opens the GUI which then allows
+	Main: This is the main class of my library management system (LMS), it opens the GUI which then allows
 	the user to interact with the LMS.
 */
 

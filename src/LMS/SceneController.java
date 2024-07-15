@@ -17,10 +17,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class SceneController {
 
@@ -205,30 +207,81 @@ public class SceneController {
     private TextField InputText;
     @FXML
     private TextField OutputText;
+    @FXML
+    private TextField InputTitle;
+    @FXML
+    private TextField InputAuthor;
+    @FXML
+    private TextField InputReleaseYear;
+    @FXML
+    private TextField InputBarcode;
+    @FXML
+    private TextArea OutputTextArea;
 
     public void actionImport(ActionEvent actionEvent) throws IOException{
-        String holder = book.importBooks(InputText.getText());
+        String holder = Functions.importBooks(InputText.getText(), book);
         OutputText.setText(holder);
     }
 
+    public void actionAdd(ActionEvent actionEvent) throws IOException{
+
+        book.setTitle(InputTitle.getText());
+        book.setAuthor(InputAuthor.getText());
+        book.setReleaseYear(Integer.parseInt(InputReleaseYear.getText()));
+        book.setBarcode(InputBarcode.getText());
+
+        Functions.addBook(1, book);
+        OutputTextArea.setText("Added Book: " + InputTitle.getText());
+    }
+
     public void removeTitle(ActionEvent actionEvent) throws IOException{
-        String holder = book.deleteBookTitle(InputText.getText());
+        book.setTitle(InputText.getText());
+
+        String holder = Functions.deleteBookTitle(book);
         OutputText.setText(holder);
     }
 
     public void removeBarcode(ActionEvent actionEvent) throws IOException{
-        String holder = book.deleteBookBarcode(InputText.getText());
+
+        book.setBarcode(InputText.getText());
+
+        String holder = Functions.deleteBookBarcode(book);
         OutputText.setText(holder);
     }
 
     public void checkIn(ActionEvent actionEvent) throws IOException{
-        String holder = book.checkInBook(InputText.getText());
+
+        book.setTitle(InputText.getText());
+
+        String holder = Functions.checkInBook(book);
         OutputText.setText(holder);
     }
 
     public void checkOut(ActionEvent actionEvent) throws IOException{
-        String holder = book.checkOutBook(InputText.getText());
+        book.setTitle(InputText.getText());
+
+        String holder = Functions.checkOutBook(book);
+
         OutputText.setText(holder);
+    }
+
+    public void AvailableBooks(ActionEvent actionEvent) throws IOException{
+        ArrayList<String> list = new ArrayList<String>();
+        list = Functions.seeAvailableBooks();
+
+        for(int x = 0; x < list.size(); x++) { // Add to controller
+            OutputTextArea.appendText(list.get(x) + "\n");
+        }
+
+    }
+
+    public void UnavailableBooks(ActionEvent actionEvent) throws IOException{
+        ArrayList<String> list = new ArrayList<String>();
+        list = Functions.seeUnavailableBooks();
+
+        for(int x = 0; x < list.size(); x++) { // Add to controller
+            OutputTextArea.appendText(list.get(x) + "\n");
+        }
     }
 
 }

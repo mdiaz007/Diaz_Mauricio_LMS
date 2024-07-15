@@ -1,10 +1,20 @@
-1,Fight Club,Chuck Palahniuk,1996,9780091835132,true,null
-2,American Psycho,Bret Ellis,1991,9780307278630,true,null
-3,Fake Book III,Fake Author,1996,978009183513F,true,null
-4,Fake Book IV,Fake Author,1996,978009183513F,true,null
-5,Fake Book V,Fake Author,1996,978009183513F,true,null
-6,Fake Book VI,Fake Author,1996,978009183513F,true,null
-7,Fake Book VII,Fake Author,1996,978009183513F,true,null
-8,Fake Book VIII,Fake Author,1996,978009183513F,true,null
-9,Fake Book IX,Fake Author,1996,978009183513F,true,null
-10,Fake Book X,Fake Author,1996,978009183513F,true,null
+1,Gullivers Travels,Jonathan Swift,1901,2323231113,Checked-In,null
+2,The Decameron,Giovanni Boccaccio,1902,2323231114,Checked-In,null
+3,History,Elsa Morante,1903,2323231115,Checked-In,null
+4,Season of Migration to the North,Tayeb Salih,1904,2323231116,Checked-In,null
+5,The Tin Drum,Gunter Grass,1905,2323231117,Checked-In,null
+6,Pippi Longstocking,Astrid Lindgren,1906,2323231118,Checked-In,null
+7,The Trial,Franz Kafka,1907,2323231119,Checked-In,null
+8,Blindness,Jose Saramago,1908,2323231120,Checked-In,null
+9,Gulliver's Travels,Jonathan Swift,1909,2323231121,Checked-In,null
+10,Nineteen Eighty-Four,George Orwell,1910,2323231122,Checked-In,null
+11,Love in the Time of Cholera,Gabriel Garcia Marquez,1911,2323231123,Checked-In,null
+12,The Devil to Pay in the Backlands,Joao Guimaraes Rosa,1912,2323231124,Checked-In,null
+13,The Magic Mountain,Thomas Mann,1913,2323231125,Checked-In,null
+14,The Old Man and the Sea,Ernest Hemingway,1914,2323231126,Checked-In,null
+15,Middlemarch,George Eliot,1915,2323231127,Checked-In,null
+16,The Idiot,Fyodor Dostoevsky,1916,2323231128,Checked-In,null
+17,Bostan,Saadi,1917,2323231129,Checked-In,null
+18,Essays,Michel de Montaigne,1918,2323231130,Checked-In,null
+19,Invisible Man,Ralph Ellison,1919,2323231131,Checked-In,null
+20,Don Quijote De La Mancha,Miguel de Cervantes,1920,2323231132,Checked-In,null

@@ -57,6 +57,7 @@ public class Database {
 
         }catch(SQLException e){
             e.printStackTrace();
+            System.out.println("DATABASE ERROR");
         }
 
         return list;

@@ -19,7 +19,9 @@ import java.util.ArrayList;
 public class Functions { // Book class for setting up Book objects.
 
     // Function for asking user for book information then adding to database.
-    public static void addBook(int decision, Book book){
+    public static int addBook(int decision, Book book){
+
+        ArrayList<String> UnitTestCheck = new ArrayList<>();
 
         // Decision is for function needs to be used without user import, for importing purposes. Decision 1
         if (decision == 1){
@@ -32,8 +34,12 @@ public class Functions { // Book class for setting up Book objects.
         String sqlCommand = "INSERT INTO BOOKS (ID, TITLE, AUTHOR, RELEASEYEAR, BARCODE, STATUS, DUEDATE)\n" +
                 "VALUES ("+null+", '"+book.getTitle()+"', '"+book.getAuthor()+"' , "+book.getReleaseYear()+", '"+book.getBarcode()+"', '"+book.getStatus()+"', '"+book.getDueDate()+"')";
 
-        Database.DatabaseConnect(sqlCommand, 1);
+        UnitTestCheck = Database.DatabaseConnect(sqlCommand, 1);
         book.resetBook(); // Resets Book to default values.
+
+        int check = Integer.parseInt(UnitTestCheck.getFirst());
+
+        return check;
     }
 
     // Function asks user for input for deleting book with given barcode.

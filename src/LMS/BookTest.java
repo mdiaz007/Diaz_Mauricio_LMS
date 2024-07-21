@@ -17,7 +17,8 @@ class BookTest { // Visible within same package, not accessible by other package
 
     Book testBook = new Book();
 
-    public BookTest(){ // Constructor for unit test.
+    // Constructor for unit test.
+    public BookTest(){
         setTestBook();
     }
 
@@ -29,8 +30,9 @@ class BookTest { // Visible within same package, not accessible by other package
         testBook.setBarcode("UnitTest");
     }
 
+    // Complete JUnit tests.
     @Test
-    void addBookTest(){ // This test is for the addBook()
+    void addBookTest(){
         assertEquals(1, Functions.addBook(1, testBook));
     }
 

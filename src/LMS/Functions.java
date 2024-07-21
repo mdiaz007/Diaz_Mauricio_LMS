@@ -48,11 +48,6 @@ public class Functions { // Book class for setting up Book objects.
         ArrayList<String> list = new ArrayList<String>();
         String holder;
 
-        /*
-        * Function for going through database and finding book with given
-        * barcode for deletion.
-        * */
-
         String sqlCommand = "DELETE FROM BOOKS\n" + "WHERE BARCODE = '"+book.getBarcode()+"' ";
 
         list = Database.DatabaseConnect(sqlCommand, 1);
@@ -73,11 +68,6 @@ public class Functions { // Book class for setting up Book objects.
 
     // Function asks user for input for deleting book with given title.
     public static String deleteBookTitle(Book book){
-
-        /*
-         * Function for going through database and finding book with given
-         * title for deletion.
-         * */
 
         ArrayList<String> list = new ArrayList<String>();
         String holder;
@@ -100,12 +90,8 @@ public class Functions { // Book class for setting up Book objects.
 
     }
 
+    // Function for checking in book.
     public static String checkInBook(Book book){
-
-        /*
-         * Function for changing database status of corresponding book to checked in / available
-         * if found.
-         * */
 
         String sqlCommand = "UPDATE BOOKS\n" + "SET STATUS = 'Checked-In' \n" + "WHERE TITLE = '"+book.getTitle()+"' ";
 
@@ -121,6 +107,7 @@ public class Functions { // Book class for setting up Book objects.
         return holder;
     }
 
+    // Function for checking out book.
     public static String checkOutBook(Book book){
 
         // Creates LocalDate objects for use of due date.
@@ -129,11 +116,6 @@ public class Functions { // Book class for setting up Book objects.
         String dueDateString = dueDate.toString();
 
         String holder = null;
-
-        /*
-         * Function for changing database status of corresponding book to checked out / unavailable
-         * if found.
-         * */
 
         String sqlCommand = "UPDATE BOOKS\n" + "SET STATUS = 'Checked-Out' \n" + "WHERE TITLE = '"+book.getTitle()+"' ";
         String sqlCommand1 = "UPDATE BOOKS\n" + "SET DUEDATE = '"+dueDateString+"' \n" + "WHERE TITLE = '"+book.getTitle()+"' ";
@@ -147,16 +129,8 @@ public class Functions { // Book class for setting up Book objects.
 
         return holder;
     }
-
+    // Function for seeing unavailable books.
     public static ArrayList<String> seeAvailableBooks(){
-
-        /*
-         * For loop to go through database, and assign each column value 1 by 1
-         * to setters and then use print with getters to print all available books to console.
-         *
-         * Or just use SQL commands and print books via a query EX: select * from books where
-         * status == available or checked-in
-         * */
 
         String sqlCommand = "SELECT * FROM BOOKS WHERE STATUS = 'Checked-In'";
 
@@ -166,15 +140,8 @@ public class Functions { // Book class for setting up Book objects.
 
     }
 
+    // Function for seeing unavailable books.
     public static ArrayList<String> seeUnavailableBooks(){
-
-        /*
-         * For loop to go through database, and assign each column value 1 by 1
-         * to setters and then use print with getters to print all available books to console.
-         *
-         * Or just use SQL commands and print books via a query EX: select * from books where
-         * status == available or checked-in
-         * */
 
         String sqlCommand = "SELECT * FROM BOOKS WHERE STATUS = 'Checked-Out'";
 
@@ -189,9 +156,6 @@ public class Functions { // Book class for setting up Book objects.
         String line = null; // Holds line data of imported file.
         int counter = 0; // Counter for holding number of how many books have been added.
 
-        // Takes user give
-//        System.out.print("Please enter name of comma delimited text file of books to be imported: ");
-//        String title = scanner.nextLine();
         String location = TextFileLocation;
 
         try { // Try and catch just in case for exception handling.
@@ -215,9 +179,6 @@ public class Functions { // Book class for setting up Book objects.
                 addBook(2, book);
                 counter++;
             }
-
-//            System.out.println("Import complete");
-//            System.out.println(counter + " Books have been imported into database");
 
             String returnMe = (counter + " Books have been imported into database");
             reader.close(); // Closes reader.

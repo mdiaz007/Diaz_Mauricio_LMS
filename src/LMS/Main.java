@@ -17,25 +17,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-
-import java.sql.ResultSet;
-import java.util.ArrayList;
-
 public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args); // Launches JavaFX GUI.
-
-//        String sqlCommand = "SELECT * FROM BOOKS WHERE STATUS = 'Checked-Out'";
-//
-//
-//        System.out.println(sqlCommand);
-//        ArrayList<String> list = Database.DatabaseConnect(sqlCommand, 2);
-//
-//        for(int x = 0; x < list.size(); x++) { // Add to controller
-//            System.out.println(list.get(x));
-//        }
-
     }
 
     @Override // Good practice to include, generates error if extension doesn't work.

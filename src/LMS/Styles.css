@@ -1,12 +1,12 @@
 
 .root { /* Styling applies to all classes */
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: #E0DECF;
     -fx-max-width: 100%;
     -fx-start-margin: auto;
 }
 
 .button{ /* Styling for all buttons */
-    -fx-background-color: #BF311A;
+    -fx-background-color: #453F3C;
     -fx-text-fill: #DCDDDE;
 }
 
@@ -21,16 +21,16 @@
 }
 
 #PStartScreenImage{ /* Image for start screen*/
-    -fx-background-image: url("Images/vcmss.jpg");
+    -fx-background-image: url("Images/books.png");
 }
 
 #PMainMenuImage{
-    -fx-background-image: url("Images/vcmss.jpg");
+    -fx-background-image: url("Images/books.png");
     -fx-max-height: 400;
 }
 
 #PBookCatalog{
-    -fx-background-image: url("Images/vcmss.jpg");
+    -fx-background-image: url("Images/books.png");
     -fx-max-height: 200;
     -fx-max-width: 200;
 }

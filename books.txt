@@ -6,7 +6,7 @@
 6,Pippi Longstocking,Astrid Lindgren,1906,2323231118,Checked-In,null
 7,The Trial,Franz Kafka,1907,2323231119,Checked-In,null
 8,Blindness,Jose Saramago,1908,2323231120,Checked-In,null
-9,Gulliver's Travels,Jonathan Swift,1909,2323231121,Checked-In,null
+9,Fight Club,Chuck Palahniuk,1997,2323231198,Checked-In,null
 10,Nineteen Eighty-Four,George Orwell,1910,2323231122,Checked-In,null
 11,Love in the Time of Cholera,Gabriel Garcia Marquez,1911,2323231123,Checked-In,null
 12,The Devil to Pay in the Backlands,Joao Guimaraes Rosa,1912,2323231124,Checked-In,null

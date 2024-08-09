@@ -20,7 +20,8 @@ import java.io.IOException;
 public class Main extends Application {
 
     public static void main(String[] args) {
-        launch(args); // Launches JavaFX GUI.
+//        launch(args); // Launches JavaFX GUI.
+        Application.launch(args);
     }
 
     @Override // Good practice to include, generates error if extension doesn't work.

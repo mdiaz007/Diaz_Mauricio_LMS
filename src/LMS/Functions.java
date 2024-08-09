@@ -185,7 +185,7 @@ public class Functions { // Book class for setting up Book objects.
             return returnMe;
         } catch (IOException e){
 //            System.out.println("Error while reading file");
-            String returnMe = "Error while reading file";
+            String returnMe = "Try again, Could not find file: " + TextFileLocation;
             return returnMe;
         }
 

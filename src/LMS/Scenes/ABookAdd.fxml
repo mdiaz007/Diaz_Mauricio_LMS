@@ -35,28 +35,28 @@
                         <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="307.0">
                            <children>
                               <Label text="Title: " />
-                              <TextField fx:id="InputTitle" promptText="enter book title" />
+                              <TextField fx:id="InputTitle" focusTraversable="false" promptText="enter book title" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="283.0">
                            <children>
                               <Label text="Author: " />
-                              <TextField fx:id="InputAuthor" promptText="enter book author" />
+                              <TextField fx:id="InputAuthor" focusTraversable="false" promptText="enter book author" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="307.0">
                            <children>
                               <Label text="Release Year: " />
-                              <TextField fx:id="InputReleaseYear" promptText="enter book release year" />
+                              <TextField fx:id="InputReleaseYear" focusTraversable="false" promptText="enter book release year" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="307.0">
                            <children>
                               <Label text="Barcode: " />
-                              <TextField fx:id="InputBarcode" promptText="enter book barcode" />
+                              <TextField fx:id="InputBarcode" focusTraversable="false" promptText="enter book barcode" />
                            </children>
                         </HBox>
-                        <TextArea fx:id="OutputTextArea" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="You have added book:" wrapText="true" />
+                        <TextArea fx:id="OutputTextArea" editable="false" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" promptText="You have added book:" wrapText="true" />
                      </children>
                   </VBox>
                </children>

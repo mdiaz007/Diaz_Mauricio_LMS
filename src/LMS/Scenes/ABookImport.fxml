@@ -27,12 +27,12 @@
                   <Insets />
                </VBox.margin>
             </Label>
-            <TextField fx:id="InputText" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="400.0" promptText="Enter absolute path of text file">
+            <TextField fx:id="InputText" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="400.0" promptText="Enter absolute path of text file">
                <VBox.margin>
                   <Insets left="100.0" right="100.0" />
                </VBox.margin>
             </TextField>
-            <TextField fx:id="OutputText" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="400.0" promptText="Output" />
+            <TextField fx:id="OutputText" editable="false" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="400.0" promptText="Output" />
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
                     <children>
                         <Button mnemonicParsing="false" onAction="#actionImport" text="Import">

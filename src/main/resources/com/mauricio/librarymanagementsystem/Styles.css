@@ -1,0 +1,62 @@
+
+.root { /* Styling applies to all classes */
+    -fx-background-color: #E0DECF;
+    -fx-max-width: 100%;
+    -fx-start-margin: auto;
+}
+
+.button{ /* Styling for all buttons */
+    -fx-background-color: #453F3C;
+    -fx-text-fill: #DCDDDE;
+}
+
+.centerContainer{ /* Centers containers on the stage */
+    -fx-alignment: center;
+}
+
+.imagePane{ /* Apply to images for formatting */
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#PStartScreenImage{ /* Image for start screen */
+    -fx-background-image: url("books.png");
+}
+
+#PMainMenuImage{ /* Image settings for Main menu */
+    -fx-background-image: url("books.png");
+    -fx-max-height: 400;
+}
+
+#PBookCatalog{ /* Image settings for Book Catalog */
+    -fx-background-image: url("books.png");
+    -fx-max-height: 200;
+    -fx-max-width: 200;
+}
+
+#PCatalogLabel{ /* Colors and settings for the Public Catalog Label */
+    -fx-background-color: #DCDDDE;
+    -fx-border-color: #FDB913;
+    -fx-border-width: 3px;
+}
+
+/* Button styles */
+
+#radioButton1{
+    -fx-text-fill: green;
+}
+
+#radioButton2{
+    -fx-text-fill: darkorange;
+}
+
+#onboardingEnter1{
+    -fx-background-color: green;
+    -fx-text-fill: #DCDDDE;
+}
+
+#onboardingEnter2{
+    -fx-background-color: darkorange;
+    -fx-text-fill: #DCDDDE;
+}

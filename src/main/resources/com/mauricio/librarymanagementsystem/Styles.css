@@ -24,7 +24,7 @@
     -fx-background-image: url("books.png");
 }
 
-#PMainMenuImage{ /* Image settings for Main menu */
+#PMainMenuImage{ /* Image settings for App menu */
     -fx-background-image: url("books.png");
     -fx-max-height: 400;
 }

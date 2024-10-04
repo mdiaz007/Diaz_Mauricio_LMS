@@ -4,7 +4,7 @@
 	June 15, 2024
 	Software Development 1
 
-	Main: This is the main class of my library management system (LMS), it opens the GUI which then allows
+	App: This is the main class of my library management system (LMS), it opens the GUI which then allows
 	the user to interact with the LMS.
 */
 
@@ -20,9 +20,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class Main extends Application {
+public class App extends Application {
 
-    public static void main(String[] args) {
+    public static void run(String[] args) {
         Application.launch(args);
     }
 

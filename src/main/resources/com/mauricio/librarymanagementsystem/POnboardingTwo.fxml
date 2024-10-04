@@ -34,7 +34,7 @@
                   <Insets bottom="5.0" top="5.0" />
                </VBox.margin>
                <children>
-                  <TextArea editable="false" prefHeight="97.0" prefWidth="426.0" text="To use an existing database, the requirements are:&#10;&#10;- Database had to have been originally created by this program.&#10;- The database should be called &quot;LMS_DATABASE.db&quot;&#10;- The database should be placed in the LibraryManagementSystem directory.&#10;&#10;Once requirements are met, click the &quot;Exit Program&quot; button below and then reopen program." wrapText="true">
+                  <TextArea editable="false" prefHeight="97.0" prefWidth="426.0" text="To use an existing database, the requirements are:&#10;&#10;- Database had to have been originally created by this program.&#10;- The database should be called &quot;LMS_DATABASE&quot;&#10;- The database should be placed in the LibraryManagementSystem directory.&#10;&#10;Once requirements are met, click the &quot;Exit Program&quot; button below and then reopen program." wrapText="true">
                      <font>
                         <Font size="14.0" />
                      </font></TextArea>

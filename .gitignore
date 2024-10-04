@@ -2,7 +2,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-LMS_DATABASE.db
+LMS_DATABASE
 dependency-reduced-pom.xml
 
 ### IntelliJ IDEA ###

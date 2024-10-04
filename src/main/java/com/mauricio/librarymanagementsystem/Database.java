@@ -23,7 +23,7 @@ public class Database {
         // Holds the location of the database.
 
         // This needs to be changed for using different databases.
-        String location = "jdbc:sqlite:LMS_DATABASE.db";
+        String location = "jdbc:sqlite:LMS_DATABASE";
 
         // Declares and initializes connect object.
         Connection connect = null;
@@ -66,7 +66,7 @@ public class Database {
 
     public static void createDatabase(){ // Creates new database if necessary
 
-        String location = "jdbc:sqlite:LMS_DATABASE.db";
+        String location = "jdbc:sqlite:LMS_DATABASE";
 
         // Declares and initializes connect object.
         Connection connect = null;

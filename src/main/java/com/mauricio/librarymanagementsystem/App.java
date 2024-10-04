@@ -31,7 +31,7 @@ public class App extends Application {
 
         // If database exists do this
 
-        Path file = Path.of("LMS_DATABASE.db");
+        Path file = Path.of("LMS_DATABASE");
 
         if (Files.exists(file)){ // If database exists then do this
             // Creates the first scene.

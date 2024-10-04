@@ -1,15 +1,12 @@
-/*
+package com.mauricio.librarymanagementsystem;/*
 	Mauricio Diaz
 	CEN3024C
 	July 18 , 2024
 	Software Development 1
 
-	BookTest Class: This class is for holding the Unit Tests for the Book class.
+	com.mauricio.librarymanagementsystem.BookTest Class: This class is for holding the Unit Tests for the Book class.
 */
 
-import com.mauricio.librarymanagementsystem.Book;
-import com.mauricio.librarymanagementsystem.Database;
-import com.mauricio.librarymanagementsystem.Functions;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;

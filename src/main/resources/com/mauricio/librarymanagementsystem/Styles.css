@@ -1,6 +1,7 @@
 
 .root { /* Styling applies to all classes */
-    -fx-background-color: #E0DECF;
+    /*-fx-background-color: #E0DECF; !* Default *!*/
+    -fx-background-color: white;
     -fx-max-width: 100%;
     -fx-start-margin: auto;
 }

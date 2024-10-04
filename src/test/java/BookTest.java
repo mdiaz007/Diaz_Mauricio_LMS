@@ -37,7 +37,7 @@ class BookTest { // Visible within same package, not accessible by other package
     @Test
     void addRemoveBookTest() {
 
-        File myObj = new File("LMS_DATABASE");
+        File myObj = new File("LMS_DATABASE.db");
 
         if (myObj.exists()){
             assertEquals(1, Functions.addBook(1, testBook));

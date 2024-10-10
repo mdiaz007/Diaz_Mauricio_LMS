@@ -1,25 +1,19 @@
 ## Library Management System
-Library Management System is a school project that allows for users to manage books in a library. Completed by me, Mauricio Diaz during the summer term of 2024 at Valencia College. The program was created using the Java programming language and other technologies, JavaFX framework and SceneBuilder for the graphical user interface, JUnit framework for simple testing of the program functions, Figma for GUI design, and SQLite for the database.
+Library Management System is a school project that allows for users to manage books in a library. Completed by me, Mauricio Diaz during the summer term of 2024 at Valencia College. The program was created using the Java programming language and other technologies, JavaFX framework and SceneBuilder for the graphical user interface, JUnit framework for simple testing of the program functions, Figma for GUI design, SQLite for the database, Maven for automating build, JPackage for packaging, and Jenkins for an automated workflow.
 
 ## Requirements
 Requirements for the program to run.
 
 Operating System: Linux
 
-IDE: IntelliJ
 
-For the program to run in any other IDE or Operating system, tinkering of the dependencies is required.
+For the program to run in any other Operating system, the program needs to be built and packaged using another OS using Maven Shade Plugin & JPackage.
 
 ## Installation
 
-To use the program you would need to clone the project using git using the following command in your desired directory.
+To download and install the program please visit the release page in this repository, there you will find an installable .deb file ready to be downloaded.
 
-```bash
-git clone git@github.com:mdiaz007/LibraryManagementSystem.git
-```
-Once the program has been cloned then open it in IntelliJ and run the Main function.
-
-![Screenshots](Screenshots/14.png)
+After installing, simply open the program to run.
 
 ## Screenshots
 ![Screenshots](Screenshots/1.png)
